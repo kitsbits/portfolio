@@ -8,13 +8,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import LogoBase from 'components/Logo';
-import { colors } from 'theme';
+
+const bg = require('../../images/background.jpg');
 
 const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
   padding: 70px 20px 0;
-  background-color: ${colors.background};
+  background: url(${bg}) no-repeat center;
+  background-size: cover;
 `;
 
 const Logo = styled(LogoBase)`
