@@ -7,6 +7,8 @@
 
 import React from 'react';
 import styled from 'styled-components';
+
+import Nav from 'components/Nav';
 import LogoBase from 'components/Logo';
 
 const bg = require('../../images/background.jpg');
@@ -17,6 +19,7 @@ const Wrapper = styled.div`
   padding: 70px 20px 0;
   background: url(${bg}) no-repeat center;
   background-size: cover;
+  position: fixed;
 `;
 
 const Logo = styled(LogoBase)`
@@ -28,6 +31,7 @@ const Logo = styled(LogoBase)`
 export default function HomePage() {
   return (
     <Wrapper>
+      <Nav />
       <Logo />
     </Wrapper>
   );
