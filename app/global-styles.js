@@ -25,7 +25,9 @@ const GlobalStyle = createGlobalStyle`
   p,
   label {
     font-family: 'Josefin Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.5em;
+    /* line-height: 1.5em; */
+    padding: 0;
+    margin: 0;
   }
 `;
 

@@ -16,10 +16,16 @@ const bg = require('../../images/background.jpg');
 const Wrapper = styled.div`
   height: 100vh;
   width: 100vw;
-  padding: 70px 20px 0;
   background: url(${bg}) no-repeat center;
   background-size: cover;
   position: fixed;
+`;
+
+const Constrain = styled.div`
+  /* max-width: 1440px; */
+  margin: 0 auto;
+  padding: 70px 20px 0;
+  position: relative;
 `;
 
 const Logo = styled(LogoBase)`
@@ -31,8 +37,10 @@ const Logo = styled(LogoBase)`
 export default function HomePage() {
   return (
     <Wrapper>
-      <Nav />
-      <Logo />
+      <Constrain>
+        <Nav />
+        <Logo />
+      </Constrain>
     </Wrapper>
   );
 }
