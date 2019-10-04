@@ -21,7 +21,7 @@ export const ClippedRect = styled.rect`
   width: 0%;
   fill: ${colors.brand};
   fill-opacity: 1;
-  transition: width 0.55s ${easings.quadIn};
+  transition: width 0.6s ${easings.quadIn};
 `;
 
 export const Text = styled.text`
@@ -56,7 +56,7 @@ export const Link = styled.a`
 
   &:hover {
     ${ClippedRect} {
-      transition: width 0.55s ${easings.quadOut};
+      transition: width 0.45s ${easings.quadOut};
       width: 100%;
       height: 100%;
     }
@@ -75,7 +75,6 @@ export const Link = styled.a`
 export const Svg = styled.svg`
   height: calc(100% + 60px);
   width: calc(100% + 60px);
-  /* background-color: royalblue; */
   position: absolute;
   top: -10px;
   left: -30px;
