@@ -2,16 +2,17 @@ import styled from 'styled-components';
 import { colors, fonts, easings } from 'theme';
 
 export const LINE_HEIGHT = 18;
+export const MARGIN_BOTTOM = 21;
 
 export const Wrapper = styled.nav`
   position: absolute;
-  top: 40px;
-  right: 40px;
+  top: 70px;
+  right: 50px;
 `;
 
 export const LinkWrapper = styled.div`
   &:not(:last-child) {
-    margin-bottom: 21px;
+    margin-bottom: ${MARGIN_BOTTOM}px;
   }
 `;
 
@@ -20,10 +21,11 @@ export const ClippedRect = styled.rect`
   width: 0%;
   fill: ${colors.brand};
   fill-opacity: 1;
-  transition: width 0.65s 0.1s ${easings.backOut};
+  transition: width 0.55s ${easings.quadIn};
 `;
 
 export const Text = styled.text`
+  letter-spacing: normal;
   fill: ${colors.fontLight};
 `;
 
@@ -54,6 +56,7 @@ export const Link = styled.a`
 
   &:hover {
     ${ClippedRect} {
+      transition: width 0.55s ${easings.quadOut};
       width: 100%;
       height: 100%;
     }
@@ -67,4 +70,19 @@ export const Link = styled.a`
     top: -25%;
     left: -12.5%;
   }
+`;
+
+export const Svg = styled.svg`
+  height: calc(100% + 60px);
+  width: calc(100% + 60px);
+  /* background-color: royalblue; */
+  position: absolute;
+  top: -10px;
+  left: -30px;
+`;
+
+export const Line = styled.line`
+  stroke: ${colors.brand};
+  stroke-linecap: round;
+  stroke-width: 3px;
 `;
